@@ -1,10 +1,12 @@
 <div>
   <h1>Angular</h1>
-  <h2>Props List</h2>
+  <h2>Add something to the Props List</h2>
 </div>
 
-<ul *ngFor="let prop of singleSpaProps.list">
-  <li>{{prop}}</li>
-</ul>
+<form>
+  <input [formControl]="form">
+
+  <button type="submit" (click)="onSubmit()" [disabled]='form.invalid'>Add</button>
+</form>
 
 <router-outlet></router-outlet>
